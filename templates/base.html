@@ -1,0 +1,5 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#100d0e"><title>{% block title %}TẤN TRÍ MOD SKIN{% endblock %}</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><div class="topline"></div><header class="nav wrap"><a class="brand" href="/"><span class="brand-mark">TT</span><span>TẤN TRÍ <b>MOD SKIN</b><small>ARENA CATALOGUE</small></span></a><nav><a href="/#library">Kho tướng & skin</a><a href="/admin">Quản trị</a></nav></header>
+<main>{% with messages = get_flashed_messages(with_categories=true) %}{% if messages %}<div class="wrap flashes">{% for category,message in messages %}<div class="flash {{ category }}">{{ message }}</div>{% endfor %}</div>{% endif %}{% endwith %}{% block content %}{% endblock %}</main>
+<footer class="footer wrap"><span>© TẤN TRÍ MOD SKIN</span><span>Danh mục tham khảo · Không liên kết với Garena</span></footer><script src="{{ url_for('static', filename='app.js') }}"></script></body></html>
